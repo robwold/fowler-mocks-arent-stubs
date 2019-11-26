@@ -10,5 +10,8 @@ class Order
   # - expected exactly once, not yet invoked: #<Mock:warehouse>.remove("Talisker", 50)
   # - expected exactly once, not yet invoked: #<Mock:warehouse>.has_inventory?("Talisker", 50)
   def fill(warehouse)
+    warehouse.has_inventory?(@brand, @quantity)
+    # yes this is broken
+    warehouse.remove(@brand, @quantity)
   end
 end

@@ -38,7 +38,6 @@ class OrderInteractionTest < Minitest::Test
     warehouse_mock.expects(:remove).with(TALISKER, 50)
 
     order.fill(warehouse_mock)
-    warehouse_mock.verify
     assert order.filled?
   end
 
