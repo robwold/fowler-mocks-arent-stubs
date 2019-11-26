@@ -55,15 +55,5 @@ class OrderInteractionTest < Minitest::Test
   #     assertFalse(order.isFilled());
   #   }
 
-  # def test_filling_does_not_remove_if_not_enough_stock
-  #   order = Order.new(TALISKER, 51)
-  #   warehouse_mock = Mock.new('warehouse')
-  #
-  #   warehouse_mock.expects(:has_inventory).returns(false)
-  #   warehouse_mock.expects(:remove).with(TALISKER, 50)
-  #
-  #   order.fill(warehouse_mock)
-  #   # warehouse_mock.verify
-  #   refute order.filled?
-  # end
+
 end

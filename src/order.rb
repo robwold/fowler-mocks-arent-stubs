@@ -14,4 +14,8 @@ class Order
     # yes this is broken
     warehouse.remove(@brand, @quantity)
   end
+
+  def filled?
+    true
+  end
 end
