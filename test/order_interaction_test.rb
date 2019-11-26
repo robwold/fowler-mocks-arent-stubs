@@ -34,7 +34,7 @@ class OrderInteractionTest < Minitest::Test
     order = Order.new(TALISKER, 50)
     warehouse_mock = mock('warehouse')
 
-    warehouse_mock.expects(:has_inventory).with(TALISKER, 50).returns(true)
+    warehouse_mock.expects(:has_inventory?).with(TALISKER, 50).returns(true)
     warehouse_mock.expects(:remove).with(TALISKER, 50)
 
     order.fill(warehouse_mock)
