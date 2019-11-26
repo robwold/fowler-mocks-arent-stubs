@@ -32,7 +32,7 @@ class OrderInteractionTest < Minitest::Test
   #   }
   def test_filling_removes_inventory_if_in_stock
     order = Order.new(TALISKER, 50)
-    warehouse_mock = Mock.new('warehouse')
+    warehouse_mock = mock('warehouse')
 
     warehouse_mock.expects(:has_inventory).with(TALISKER, 50).returns(true)
     warehouse_mock.expects(:remove).with(TALISKER, 50)
